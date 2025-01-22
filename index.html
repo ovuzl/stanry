@@ -4,313 +4,707 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/tablet.css">
     <link rel="stylesheet" href="./css/desktop.css">
-    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/font.css">
-    <link rel="stylesheet" href="./main.js">
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+    
 </head>
 <body>
     <div id="wrapper">
         <header>
             <div class="wrap">
                 <h1>
-                    <a href="#">
-                        <img src="./images/logo.png" alt="">
-                    </a>
+                    <a href="#"><img src="./images/logo.png" alt=""></a>
                 </h1>
-                <div class="button">
-                    <div class="lang">
-                        <button type="button">KR</button>
-                    </div>
-                    <div class="btn-opn">
-                        <button type="button">
-                             <span>menu</span>
-                        </button>
-                    </div>
-                </div>
-                <nav>
-                    <div class="gnb">
-                        <div><a href="#">BRAND</a></div>
-                        <div><a href="#">MENU</a></div>
-                        <div><a href="#">POP CULTURE</a></div>
-                        <div><a href="#">STORE</a></div>
-                        <div><a href="#">EVENT</a></div>
-                    </div>
-                    <div class="sns">
-                        <div class="facebook">
-                            <a href="#"><img src="./images/facebook.png" alt=""></a>
-                            <p>Randys Donuts KR</p>
-                        </div>
-                        <div class="insta">
-                            <a href="#"><img src="./images/insta.png" alt=""></a>
-                            <p>andysdonuts1952kr</p>
-                        </div>
-                    </div>
+                <nav class="pc">
+                    <div><a href="#">스탠리 소개</a></div>
+                    <div><a href="#">고객센터</a></div>
+                    <div><a href="#">로그인</a></div>
+                    <div><a href="#">마이페이지</a></div>
                 </nav>
+                <div class="btn-shopping">
+                    <button type="button" class="btn-wish">
+                        <img src="./images/wish.png" alt="">
+                    </button>
+                    <button type="button" class="btn-cart">
+                        <img src="./images/bag.png" alt="">
+                        <span class="count">0</span>
+                    </button>
+                </div>
+                <form action="">
+                    <div class="btn-search">
+                        <button type="button"><img src="./images/search.png" alt=""></button>
+                    </div>
+                    <div class="search">
+                        <input type="text" placeholder="검색어 입력" name="" id="">
+                    </div>
+                    <div class="btn-camera">
+                        <button type="button"><img src="./images/camera.png" alt=""></button>
+                    </div>
+                </form>
             </div>
         </header>
-        <div class="main">
-            <video loop autoplay muted playsinline>
-                <source src="./images/main.mov" type="video/mp4">
-              </video>           
-        </div>
-        <div class="con-1">
+        <div class="banner">
             <div class="wrap">
-                <div class="text">
-                    <div class="sub">
-                        <p>World Famous Since 1952</p>
-                    </div>
-                    <div class="tit">
-                        <p>Randy’s Donuts<br>Story</p>
-                    </div>
-                    <div class="info">
-                        <p>1952년부터 미국 로스앤젤레스의 아이콘으로 자리 잡은 수제 도넛 브랜드,<br>랜디스 도넛만의 특별함을 만나보세요. </p>
-                    </div>
+                <div class="tit">
+                    <img src="./images/banner.png" alt="">
+                    <p>모든 제품</p>
                 </div>
-                <div class="btn-more">
-                    <button type="button">
-                        <div class="border">
-                            <div>
-                                <img src="./images/more.png" alt="">
-                            </div>
-                        </div>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="con-2">
-            <div class="wrap">
-                <div class="fresh">
-                    <div class="img">
-                        <img src="./images/fresh.png" alt="">
-                    </div>
-                    <div class="text">
-                        <div class="tit">
-                            <p><span>최고의 재료</span>와 <span>특별한 비법</span>으로<br>완성된 도넛은 더욱 풍성한 맛을 선사하며,<br>신선함은<span> 오래도록</span> 유지됩니다.</p>
-                        </div>
-                        <div class="sub">
-                            <p>70년 역사의 랜디스 도넛은 매장에서 직접 만든 특별한 수제 도넛으로<br>정확히 같은 모양이 아니라는 점이 수제의 특별함 입니다.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="premium">
-                    <div class="text">
-                        <p>클래식 도넛부터 프리미엄 도넛까지<br> <span>다양하고 아낌없는 토핑으로</span><br>도넛의 신세계를 선사합니다. </p>
-                    </div>
-                    <div class="img">
-                        <img src="./images/premium.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="con-3">
-            <div class="wrap">
-                <div class="text">
-                    <p class="tit">Best Menu</p>
-                    <p class="sub">랜디스 도넛의 <span>베스트 제품</span>을 소개합니다.</p>
-                </div>
-                <div class="swiper Menu">
+                <div class="swiper content">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <a href="#"><img src="./images/donut(1).png" alt=""></a>
-                            <p class="type">Classic</p>
-                            <p class="name">글레이즈 도넛</p>
+                            <a href="#">
+                                <img src="./images/coffee.png" alt="">
+                                <p>커피용기</p>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="#"><img src="./images/donut(2).png" alt=""></a>
-                            <p class="type">Premium</p>
-                            <p class="name">스프링 어니언 도넛</p>
+                            <a href="#">
+                                <img src="./images/beer.png" alt="">
+                                <p>맥주용기</p>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="#"><img src="./images/donut(3).png" alt=""></a>
-                            <p class="type">Fancy</p>
-                            <p class="name">카라멜 코코넛 도넛</p>
+                            <a href="#">
+                                <img src="./images/food.png" alt="">
+                                <p>음식용기</p>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="#"><img src="./images/donut(4).png" alt=""></a>
-                            <p class="type">Fancy</p>
-                            <p class="name">버터 크럼 도넛</p>
+                            <a href="#">
+                                <img src="./images/clooler.png" alt="">
+                                <p>쿨러</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="./images/water.png" alt="">
+                                <p>워터저그</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="./images/tools.png" alt="">
+                                <p>조리도구</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="./images/camp.png" alt="">
+                                <p>캠핑용 커피</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="./images/lunch.png" alt="">
+                                <p>도시락</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="./images/lunchbox.png" alt="">
+                                <p>런치박스</p>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="btn-more">
-                    <button type="button">
-                        <div class="border">
-                            <div>
-                                <img src="./images/more.png" alt="">
+            </div>
+        </div>
+        <div class="sec-1">
+            <div class="wrap">
+                <div class="main-text">
+                    <p class="tit">Find Something They’ll Love</p>
+                    <p class="sub">황금빛 연말을 위한 최고의 선물 스탠리 한정판으로 마음을 전하세요.</p>
+                </div>
+                <div class="content">
+                    <div class="con-1">
+                        <div class="main-img">
+                            <img class="pc tab" src="./images/con-1 img(1).png" alt="">
+                            <img class="pc tab" src="./images/con-1 img(2).png" alt="">
+                        </div>
+                    </div>
+                    <div class="con-2">
+                        <div class="quencher">
+                            <div class="thum">
+                                <a href=""><img src="./images/quencher.png" alt=""></a>
+                                <div class="text">
+                                    <p class="tit">홀리데이 퀀처 H2.0</p>
+                                    <p class="sub">Comfort & Joy 컬렉션으로 일년 내내 따뜻한 휴일을 보내세요.</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-1">
+                                    <div class="img">
+                                        <a href="#"><img src="./images/quencher(1).png" alt=""></a>
+                                    </div>
+                                    <div class="text">
+                                        <p class="eng">The Holiday Quencher H2.0 FlowState™ Tumbler</p>
+                                        <p class="kor">더홀리데이 퀜처 H2.0 플로우스테이트 텀블러</p>
+                                        <div class="price">
+                                            <p>10%</p>
+                                            <p>53,100원</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </button>
+                        <div class="party">
+                            <div class="thum">
+                                <a href=""><img src="./images/party.png" alt=""></a>
+                                <div class="text">
+                                    <p class="tit">파티에 어울리는 추천템</p>
+                                    <p class="sub">사랑하는 사람들과 더욱 우아하고 반짝거리는 파티를 즐겨보세요.</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-1">
+                                    <div class="img">
+                                        <a href="#"><img src="./images/party(1).png" alt=""></a>
+                                    </div>
+                                    <div class="text">
+                                        <p class="eng">The Holiday Stay-Chill</p>
+                                        <p class="kor">더 홀리데이 스테이칠 그라울러 세트</p>
+                                        <div class="price">
+                                            <p>10%</p>
+                                            <p>210,000원</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-2">
+                                    <div class="img">
+                                        <a href="#"><img src="./images/party(2).png" alt=""></a>
+                                    </div>
+                                    <div class="text">
+                                        <p class="eng">Classic Stay-Chill Beer Pint</p>
+                                        <p class="kor">클래식 스테이칠 비어 파인트</p>
+                                        <div class="price">
+                                            <p>10%</p>
+                                            <p>41,200원</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="con-3">
+                        <div class="key">
+                            <div class="thum">
+                                <a href="#"><img src="./images/key.png" alt=""></a>
+                                <div class="text">
+                                    <p class="tit">텀블러 장식 키체인</p>
+                                    <p class="sub">베스트 셀러인 Rose Quartz와 Comfort & Joy 컬렉션과 어울리는 미니 사이즈 키 체인입니다.</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-1">
+                                    <div class="img">
+                                        <a href="#"><img src="./images/key(1).png" alt=""></a>
+                                    </div>
+                                    <div class="text">
+                                        <p class="eng">The Quencher H2.0 Tumbler Ornament Keychain Gold</p>
+                                        <p class="kor">더 퀜처 H2.0 텀블러 오너먼트 키체인 골드</p>
+                                        <div class="price">
+                                            <p>10%</p>
+                                            <p>19,000원</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-2">
+                                    <div class="img">
+                                        <a href="#"><img src="./images/key(2).png" alt=""></a>
+                                    </div>
+                                    <div class="text">
+                                        <p class="eng">The Quencher H2.0 Tumbler Ornament Keychain Pomegranate</p>
+                                        <p class="kor">더 퀜처 H2.0 텀블러 오너먼트 키체인 버건디</p>
+                                        <div class="price">
+                                            <p>10%</p>
+                                            <p>19,000원</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stay-chil">
+                            <div class="thum">
+                                <a href=""><img src="./images/stay-chil.png" alt=""></a>
+                                <div class="text">
+                                    <p class="tit">홀리데이 스테이칠 스태킹 파인트</p>
+                                    <p class="sub">좋아하는 휴일 맥주나 음료를 채워서 마셔보세요.</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-1">
+                                    <div class="img">
+                                        <a href="#"><img src="./images/stay-chil(1).png" alt=""></a>
+                                    </div>
+                                    <div class="text">
+                                        <p class="eng">The Holiday Stay-Chill Stacking Pint Gilded Celadon</p>
+                                        <p class="kor">더 홀리데이 스테이칠 스태킹 파인트</p>
+                                        <div class="price">
+                                            <p>10%</p>
+                                            <p>32,900원</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-2">
+                                    <div class="img">
+                                        <a href="#"><img src="./images/stay-chil(2).png" alt=""></a>
+                                    </div>
+                                    <div class="text">
+                                        <p class="eng">The Holiday Stay-Chill Stacking Pint Gilded Pomegranate</p>
+                                        <p class="kor">더 홀리데이 스테이칠 스태킹 파인트</p>
+                                        <div class="price">
+                                            <p>10%</p>
+                                            <p>32,900원</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="sec-2">
+            <div class="wrap">
+                <div class="text">
+                    <p class="tit">Best sellers</p>
+                    <p class="sub">인기 상품</p>
+                </div>
+                <div class="swiper sellers">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="thum">
+                            <a href="#"><img src="./images/item-1.png" alt=""></a>
+                        </div>
+                        <div class="text">
+                            <p class="eng">The Quencher H2.0 FlowState™ Tumbler | 40 OZ | 1.18 L</p>
+                            <p class="kor">퀜처 H2.0 플로우스테이트 텀블러 1.18L</p>
+                        </div>
+                        <div class="price">
+                            <p>59,000원</p>
+                        </div>
+                        <div class="info">
+                            <div class="bookmark">
+                                <a href="#">
+                                    <img src="./images/bookmark.png" alt="">
+                                    <p>10,558</p>
+                                </a>
+                            </div>
+                            <div class="review">
+                                <a href="#">
+                                    <img src="./images/review.png" alt="">
+                                    <p>1,063</p>
+                                </a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="thum">
+                            <a href="#"><img src="./images/item-2.png" alt=""></a>
+                        </div>
+                        <div class="text">
+                            <p class="eng">The Quencher H2.0 FlowState™ Tumbler | 40 OZ | 0.88L</p>
+                            <p class="kor">퀜처 H2.0 플로우스테이트 텀블러 0.88L</p>
+                        </div>
+                        <div class="price">
+                            <p>49,000원</p>
+                        </div>
+                        <div class="info">
+                            <div class="bookmark">
+                                <a href="#">
+                                    <img src="./images/bookmark.png" alt="">
+                                    <p>9,252</p>
+                                </a>
+                            </div>
+                            <div class="review">
+                                <a href="#">
+                                    <img src="./images/review.png" alt="">
+                                    <p>710</p>
+                                </a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="thum">
+                            <a href="#"><img src="./images/item-3.png" alt=""></a>
+                        </div>
+                        <div class="text">
+                            <p class="eng">The Quencher H2.0 FlowState™ Tumbler (Soft Matte) | 30 OZ | 0.88 L</p>
+                            <p class="kor">퀜처 H2.0 플로우스테이트 소프트 매트 텀블러 0.88L</p>
+                        </div>
+                        <div class="price">
+                            <p>49,000원</p>
+                        </div>
+                        <div class="info">
+                            <div class="bookmark">
+                                <a href="#">
+                                    <img src="./images/bookmark.png" alt="">
+                                    <p>7,398</p>
+                                </a>
+                            </div>
+                            <div class="review">
+                                <a href="#">
+                                    <img src="./images/review.png" alt="">
+                                    <p>602</p>
+                                </a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="thum">
+                            <a href="#"><img src="./images/item-4.png" alt=""></a>
+                        </div>
+                        <div class="text">
+                            <p class="eng">The Quencher H2.0 FlowState™ Tumbler | 14 OZ | 0.4 L</p>
+                            <p class="kor">퀜처 H2.0 플로우스테이트 텀블러 0.4L</p>
+                        </div>
+                        <div class="price">
+                            <p>36,000원</p>
+                        </div>
+                        <div class="info">
+                            <div class="bookmark">
+                                <a href="#">
+                                    <img src="./images/bookmark.png" alt="">
+                                    <p>6,398</p>
+                                </a>
+                            </div>
+                            <div class="review">
+                                <a href="#">
+                                    <img src="./images/review.png" alt="">
+                                    <p>582</p>
+                                </a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="thum">
+                            <a href="#"><img src="./images/item-5.png" alt=""></a>
+                        </div>
+                        <div class="text">
+                            <p class="eng">The IceFlow Flip Straw Tumbler | 30 OZ | 0.88 L</p>
+                            <p class="kor">아이스플로우 스트로우 텀블러 0.88L</p>
+                        </div>
+                        <div class="price">
+                            <p>49,000원</p>
+                        </div>
+                        <div class="info">
+                            <div class="bookmark">
+                                <a href="#">
+                                    <img src="./images/bookmark.png" alt="">
+                                    <p>1,455</p>
+                                </a>
+                            </div>
+                            <div class="review">
+                                <a href="#">
+                                    <img src="./images/review.png" alt="">
+                                    <p>194</p>
+                                </a>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div class="sec-3">
+            <div class="wrap">
+                <div class="main-text">
+                    <p class="tit">Day After Day, Year After Year</p>
+                    <p class="sub">최고를 위한 시작은 메시 X 스탠리 컬렉션과 함께 하세요.</p>
+                </div>
+                <div class="content">
+                    <div class="con-1">
+                        <div class="main-img">
+                            <img class="pc tab" src="./images/sec-3 img.png" alt="">
+                        </div>
+                    </div>
+                    <div class="con-2">
+                        <div class="thum">
+                            <a href=""><img src="./images/messi.png" alt=""></a>
+                            <div class="text">
+                                <p class="tit">메시 X 스탠리 1913</p>
+                                <p class="sub">끊임없이 노력하는 메시의 열정 스탠리와 함께 GOAT를 경험해 보세요.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-1">
+                                <div class="img">
+                                    <a href="#"><img src="./images/messi(1).png" alt=""></a>
+                                </div>
+                                <div class="text">
+                                    <p class="eng">THE MESSI X STANLEY QUENCHER PROTOUR FLIP STRAW TUMBLER | 40 OZ</p>
+                                    <p class="kor">메시 x 스탠리 퀜처 프로투어 플립 스트로 텀블러 1.18L</p>
+                                    <div class="price">
+                                        <p>10%</p>
+                                        <p>71,100원</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-2">
+                                <div class="img">
+                                    <a href="#"><img src="./images/messi(2).png" alt=""></a>
+                                </div>
+                                <div class="text">
+                                    <p class="eng">THE MESSI X STANLEY ICEFLOW™ BOTTLE WITH FLIP STRAW LID | 24 OZ</p>
+                                    <p class="kor">메시 x 스탠리 아이스플로우 에어로라이트 플립 스트로 2.0 텀블러 710ml</p>
+                                    <div class="price">
+                                        <p>10%</p>
+                                        <p>71,100원</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="con-4">
+        <div class="sec-4">
             <div class="wrap">
                 <div class="text">
-                    <p>Randy’s<br>Donuts<br>in Korea</p>
-                    <div class="btn-search">
-                        <button>매장 찾기</button>
-                    </div>
+                    <p class="tit">Latest Drops</p>
+                    <p class="sub">최신 발매 상품</p>
                 </div>
-                <div class="img">
-                    <div class="image-1">
-                        <img src="./images/con-4(1).png" alt="">
+                <div class="swiper latest">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="thum">
+                            <a href="#"><img src="./images/item(1).png" alt=""></a>
+                        </div>
+                        <div class="text">
+                            <p class="eng">The Quencher H2.0 FlowState™ Tumbler | 40 OZ | 1.18 L</p>
+                            <p class="kor">퀜처 H2.0 플로우스테이트 텀블러 1.18L</p>
+                        </div>
+                        <div class="price">
+                            <p>59,000원</p>
+                        </div>
+                        <div class="info">
+                            <div class="bookmark">
+                                <a href="#">
+                                    <img src="./images/bookmark.png" alt="">
+                                    <p>239</p>
+                                </a>
+                            </div>
+                            <div class="review">
+                                <a href="#">
+                                    <img src="./images/review.png" alt="">
+                                    <p>3</p>
+                                </a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="thum">
+                            <a href="#"><img src="./images/item(2).png" alt=""></a>
+                        </div>
+                        <div class="text">
+                            <p class="eng">The Stanley Cross Bottle Essentials Case</p>
+                            <p class="kor">더 스탠리 크로스 보틀 에센셜 케이스</p>
+                        </div>
+                        <div class="price">
+                            <p>30,000원</p>
+                        </div>
+                        <div class="info">
+                            <div class="bookmark">
+                                <a href="#">
+                                    <img src="./images/bookmark.png" alt="">
+                                    <p>54</p>
+                                </a>
+                            </div>
+                            <div class="review">
+                                <a href="#">
+                                    <img src="./images/review.png" alt="">
+                                    <p>3</p>
+                                </a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="thum">
+                            <a href="#"><img src="./images/item(3).png" alt=""></a>
+                        </div>
+                        <div class="text">
+                            <p class="eng">The Quencher ProTour Flip Straw Tumbler | 40 OZ | 1.18 L</p>
+                            <p class="kor">퀜처 H2.0 프로투어 플립 스트로우 텀블러 1.18L</p>
+                        </div>
+                        <div class="price">
+                            <p>59,000원</p>
+                        </div>
+                        <div class="info">
+                            <div class="bookmark">
+                                <a href="#">
+                                    <img src="./images/bookmark.png" alt="">
+                                    <p>11</p>
+                                </a>
+                            </div>
+                            <div class="review">
+                                <a href="#">
+                                    <img src="./images/review.png" alt="">
+                                    <p>-</p>
+                                </a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="thum">
+                            <a href="#"><img src="./images/item(4).png" alt=""></a>
+                        </div>
+                        <div class="text">
+                            <p class="eng">The Quencher H2.0 FlowState™ Tumbler | 14 OZ | 0.4 L</p>
+                            <p class="kor">퀜처 H2.0 플로우스테이트 텀블러 0.4L</p>
+                        </div>
+                        <div class="price">
+                            <p>36,000원</p>
+                        </div>
+                        <div class="info">
+                            <div class="bookmark">
+                                <a href="#">
+                                    <img src="./images/bookmark.png" alt="">
+                                    <p>19</p>
+                                </a>
+                            </div>
+                            <div class="review">
+                                <a href="#">
+                                    <img src="./images/review.png" alt="">
+                                    <p>-</p>
+                                </a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="thum">
+                            <a href="#"><img src="./images/item(5).png" alt=""></a>
+                        </div>
+                        <div class="text">
+                            <p class="eng">The Quencher ProTour Flip Straw Tumbler | 20 OZ | 0.6 L</p>
+                            <p class="kor">퀜처 H2.0 프로투어 플립 스트로우 텀블러 0.6L</p>
+                        </div>
+                        <div class="price">
+                            <p>39,000원</p>
+                        </div>
+                        <div class="info">
+                            <div class="bookmark">
+                                <a href="#">
+                                    <img src="./images/bookmark.png" alt="">
+                                    <p>44</p>
+                                </a>
+                            </div>
+                            <div class="review">
+                                <a href="#">
+                                    <img src="./images/review.png" alt="">
+                                    <p>-</p>
+                                </a>
+                            </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="image-2">
-                        <img src="./images/con-4(3).png" alt="">
-                    </div>
-                    <div class="image-3">
-                        <img src="./images/con-4(2).png" alt="">
-                    </div>
-                    <div class="image-4">
-                        <img src="./images/con-4(4).png" alt="">
-                    </div>
-                </div>
+                </div> 
             </div>
         </div>
-        <div class="con-5">
+        <div class="sec-5">
             <div class="wrap">
                 <div class="text">
-                    <p class="tit">Event</p>
-                    <p class="sub">랜디스 도넛에서 진행 중인 <span>다양한 이벤트</span>를 즐겨보세요!</p>
+                    <p>시리즈별 제품 보러가기</p>
                 </div>
-                <div class="swiper Event">
+                <div class="swiper series">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="./images/con-5(1).png" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./images/con-5(2).png" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./images/con-5(3).png" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./images/con-5(4).png" />
-                         </div>
-                        <div class="swiper-slide">
-                            <img src="./images/con-5(5).png" />
-                         </div>
-                         <div class="swiper-slide">
-                            <img src="./images/con-5(6).png" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./images/con-5(7).png" />
-                        </div>
-                    </div>
-                </div>
-                <div class="btn-more">
-                    <button type="button">
-                        <div class="border">
-                            <div>
-                                <img src="./images/more.png" alt="">
+                            <div class="thum">
+                                <a href="#"><img src="./images/classic.png" alt=""></a>
+                            </div>
+                            <div class="text">
+                                <p>클래식 시리즈</p>
+                                <button type="button">구매하기</button>
                             </div>
                         </div>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="con-6">
-            <div class="wrap">
-                <div class="text">
-                    <p class="tit">Be a Family<br>With<br>Randy’s</p>
-                    <p class="sub">랜디스 도넛과 함께 할<br><span>가맹점 점주님</span>을 모집합니다.</p>
-                    <div class="btn-search">
-                        <button>더 알아보기</button>
-                    </div>
-                </div>
-                <div class="img">
-                    <div class="sec-1">
-                        <div class="image-1">
-                            <img src="./images/con-6(1).png" alt="">
+                        <div class="swiper-slide">
+                            <div class="thum">
+                                <a href="#"><img src="./images/go.png" alt=""></a>
+                            </div>
+                            <div class="text">
+                                <p>GO 시리즈</p>
+                                <button type="button">구매하기</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="thum">
+                                <a href="#"><img src="./images/adventure.png" alt=""></a>
+                            </div>
+                            <div class="text">
+                                <p>어드벤쳐 시리즈</p>
+                                <button type="button">구매하기</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="thum">
+                                <a href="#"><img src="./images/legacy.png" alt=""></a>
+                            </div>
+                            <div class="text">
+                                <p>레거시 시리즈</p>
+                                <button type="button">구매하기</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="thum">
+                                <a href="#"><img src="./images/master.png" alt=""></a>
+                            </div>
+                            <div class="text">
+                                <p>마스터 시리즈</p>
+                                <button type="button">구매하기</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="thum">
+                                <a href="#"><img src="./images/titanium.png" alt=""></a>
+                            </div>
+                            <div class="text">
+                                <p>티타늄 시리즈</p>
+                                <button type="button">구매하기</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="sec-2">
-                        <div class="image-2">
-                            <img src="./images/con-6(2).png" alt="">
-                        </div>
-                        <div class="image-3">
-                            <img src="./images/con-6(3).png" alt="">
-                        </div>
-                    </div>
-                </div>
+                </div> 
             </div>
         </div>
         <footer>
             <div class="wrap">
-                <div class="logo">
-                    <img src="./images/logo.png" alt="">
+                <div class="site">
+                    <p>Stanley International</p>
+                    <ul>
+                        <li>Brazil</li>
+                        <li>Canada</li>
+                        <li>Europe Japan</li>
+                        <li>New Zealand</li>
+                        <li>United Kingdom</li>
+                        <li>United States</li>
+                    </ul>
+                </div>
+                <div class="sns">
+                    <a href="#"><img src="./images/facebook.png" alt=""></a>
+                    <a href="#"><img src="./images/insta.png" alt=""></a>
+                </div>
+                <div class="util">
+                    <ul>
+                        <li>개인정보처리방침</li>
+                        <li>이용약관</li>
+                        <li>분쟁해결기준</li>
+                        <li>안전거래센터</li>
+                    </ul>
                 </div>
                 <div class="info">
-                    <div class="tit">COMPANY INFO.</div>
-                    <div class="company">서울특별시 마포구 동교로 247 4층, 5층 사업자등록번호 : 565-87-01114 대표 번호 : 02-6954-0621 대표 메일 : randysdonuts@rapport-l.com</div>
-                    <div class="copyright">Copyright ⓒ 2019, Randy's Donuts. All Rights Reserved</div>
+                    <p class="tit">STANLEY is a brand of PMI © 2024 STANLEY, All Rights Reserved.</p>
+                    <p class="sub">사업자등록번호 9131000074650183X7<br>사업자명 奔迈（上海）国际贸易有限公司<br>대표자명 DANIEL THEODORE MUSACHIA<br>사업장 주소 中国上海 自由贸易试验区西里路55号9层914B室</p>
                 </div>
             </div>
+        </footer> 
         </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script>
-        const $nav = document.querySelector("nav");
-        const $navBtn = document.querySelector(".btn-opn");
-        const $header = document.querySelector("header");
 
-        $navBtn.addEventListener("click", () => {
-            $navBtn.classList.toggle("on");
-            $nav.classList.toggle("on");
-        });
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
 
-        AOS.init();
-        
-        var swiper = new Swiper(".Menu", {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            breakpoints: {
-            640: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-            },
-            768: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-            },
-            1024: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-            },
-            },
-        });
-
-        var swiper = new Swiper(".Event", {
-            slidesPerView : 3,
-            spaceBetween : 10,
-            breakpoints: {
-            640: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-            },
-            768: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-            },
-            1024: {
-            slidesPerView: 6,
-            spaceBetween: 20,
-            },
-            },
-        });
-
-    </script>
 </body>
 </html>
