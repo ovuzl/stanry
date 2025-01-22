@@ -1,0 +1,512 @@
+/* mobile */
+.tab{display: none;}
+.pc{display: none;}
+.m{display: block;}
+
+
+#wrapper{min-width: 300px;}
+.wrap{padding: 10px 20px;}
+
+body #wrapper > *{background-color: #fff;}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999999;
+    background-color: transparent !important;
+}
+header .wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .wrap h1{
+    position: relative;
+    z-index: 999;
+}
+header .wrap h1 img{width: 30px;}
+header .wrap .button{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+header .wrap .button{
+}
+header .wrap .button .lang{
+    position: relative;
+    z-index: 999;
+}
+header .wrap .button .lang button{
+    color: #ffffff;
+    font-family: "filson";
+    font-size: 10px;
+}
+
+header .wrap .button .btn-opn{
+    z-index: 9999;
+    position: relative;
+}
+
+header .wrap .button .btn-opn button{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    flex-direction: column;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+header .wrap .button .btn-opn button::before,
+header .wrap .button .btn-opn button span,
+header .wrap .button .btn-opn button::after{
+    display: block;
+    content: '';
+    width: 18px;
+    height: 2px;
+    background-color: #fff;
+    font-size: 0;
+}
+header .wrap .button .btn-opn.on button::before{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg);}
+header .wrap .button .btn-opn.on button span{display: none;}
+header .wrap .button .btn-opn.on button::after{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(45deg);}
+
+header .wrap nav{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #204782;
+    transition: all 0.3s;
+    padding: 0 12px;
+    transition: left 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 90px;
+    padding: 0 20px;
+}
+header .wrap nav.on{
+    left: 0;
+}
+
+header .wrap nav .gnb{
+    font-family: "filson";
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: end;
+}
+header .wrap nav .sns{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+header .wrap nav .sns>div{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+header .wrap nav .sns a{
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+header .wrap nav .sns img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+header .wrap nav .sns .facebook img{width: 8px;}
+header .wrap nav .sns .insta img{width: 12px;}
+header .wrap nav .sns p{
+    font-family: "filson";
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 300;
+}
+
+.main{
+    font-size: 0;
+}
+.main video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.con-1{
+    background-image: url(../images/con-1.png);
+}
+.con-1 .wrap{
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    padding: 40px 20px;
+}
+.con-1 .wrap .text{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.con-1 .wrap .text .sub{
+    font-family: "filson";
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+.con-1 .wrap .text .sub::after{
+    content: "";
+    flex-grow: 1;
+    margin: 0 13px;
+    background-color: #ffffff;
+    height: 0.5px;
+}
+.con-1 .wrap .text .tit{
+    font-family: "filson";
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 48px;
+    text-shadow: 1px 3px 3px #C04901;
+    text-align: center;
+}
+.con-1 .wrap .text .info{
+    width: 50%;
+    margin: 0 auto;
+    line-height: 20px;
+    font-family: "Noto Sans KR", serif;
+    font-weight: 400;
+    font-size: 10px;
+    text-align: center;
+}
+.con-1 .wrap .btn-more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.con-1 .wrap .btn-more .border{
+    padding: 5px;
+    background-color: transparent;
+    border-style: dotted;
+    color: #FCC9A6;
+    border-width: 2px;
+}
+.con-1 .wrap .btn-more div{
+    padding: 6px;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+.con-1 .wrap .btn-more div img{
+    width: 12px;
+}
+
+.con-2{display: none;}
+
+.con-3{}
+.con-3 .wrap{
+    padding: 40px 20px;
+}
+.con-3 .wrap .text{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.con-3 .wrap .text .tit{
+    font-family: "filson";
+    font-size: 20px;
+    font-weight: 700;
+    color: #FF5701;
+}
+.con-3 .wrap .text .sub{
+    font-family: "Noto Sans KR", serif;
+    font-size: 10px;
+    font-weight: 400;
+}
+.con-3 .wrap .text .sub span{
+    font-weight: 700;
+}
+.con-3 .wrap .swiper{
+    padding: 30px 0;
+}
+.con-3 .wrap .swiper-wrapper .swiper-slide{
+    text-align: center;
+}
+.con-3 .wrap .swiper-wrapper .swiper-slide img{
+    width: 100%;
+}
+.con-3 .wrap .swiper-wrapper .type{
+    font-family: "filson";
+    font-size: 12px;
+    font-weight: 600;
+    color: #204782;
+    padding-bottom: 4px;
+}
+.con-3 .wrap .swiper-wrapper .name{
+    font-family: "Noto Sans KR", serif;
+    font-size: 10px;
+}
+.con-3 .wrap .btn-more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+.con-3 .wrap .btn-more .border{
+    padding: 5px;
+    background-color: transparent;
+    border-style: dotted;
+    color: #1D285A;
+    border-width: 2px;
+}
+.con-3 .wrap .btn-more div{
+    padding: 6px;
+    background-color: #F1F1F1;
+    border-radius: 50%;
+}
+.con-3 .wrap .btn-more div img{
+    width: 12px;
+}
+.con-4{
+    background-image: url(../images/con-4.jpg);
+}
+.con-4 .wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 40px 20px 50px;
+}
+.con-4 .wrap .text{
+    font-family: "filson";
+    font-size: 30px;
+    font-weight: 700;
+    color: #F7931F;
+    line-height: 34px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.con-4 .wrap .btn-search{}
+.con-4 .wrap .btn-search button{
+    font-family: "Noto Sans KR", serif;
+    color: #ffffff;
+    font-size: 10px;
+    background-color: #F7941C;
+    border-radius: 999px;
+    padding: 8px 26px;
+}
+
+.con-4 .wrap .img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+}
+.con-4 .wrap .img > div{
+
+}
+.con-4 .wrap .img > div img{
+    border-radius: 8px;
+    max-width: 100%;
+}
+
+.con-4 .wrap .img .image-1{}
+.con-4 .wrap .img .image-1 img{
+    box-shadow: 8px 8px #F7941C;
+    width: 30vw;
+}
+.con-4 .wrap .img .image-2{
+    margin-top: 7vw;
+}
+.con-4 .wrap .img .image-2 img{
+    width: 51.2vw;
+}
+.con-4 .wrap .img .image-3{
+    position: absolute;
+    bottom: 8vw;
+    left: 2vw;
+}
+.con-4 .wrap .img .image-3 img{
+    width: 20vw;
+}
+.con-4 .wrap .img .image-4{
+    margin: -28vw auto 0;
+}
+.con-4 .wrap .img .image-4 img{
+    width: 26vw;
+}
+
+.con-5{}
+.con-5 .wrap{
+    padding: 40px 20px;
+}
+.con-5 .wrap .text{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.con-5 .wrap .text .tit{
+    font-family: "filson";
+    font-size: 20px;
+    font-weight: 700;
+    color: #FF5701;
+}
+.con-5 .wrap .text .sub{
+    font-family: "Noto Sans KR", serif;
+    font-size: 10px;
+}
+.con-5 .wrap .text .sub span{
+    font-weight: 700;
+}
+.con-5 .wrap .swiper{
+    padding: 40px 0;
+}
+.con-5 .wrap .swiper .swiper-wrapper .swiper-slide:nth-child(odd) {
+    transform: translateY(-10px);
+}
+.con-5 .wrap .swiper .swiper-wrapper .swiper-slide:nth-child(even) {
+    transform: translateY(10px);
+}
+.con-5 .wrap .swiper .swiper-wrapper .swiper-slide img{
+    width: 100%;
+    border-radius: 10px;
+}
+.con-5 .wrap .btn-more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.con-5 .wrap .btn-more .border{
+    padding: 5px;
+    background-color: transparent;
+    border-style: dotted;
+    color: #1D285A;
+    border-width: 2px;
+}
+.con-5 .wrap .btn-more div{
+    padding: 6px;
+    background-color: #F1F1F1;
+    border-radius: 50%;
+}
+.con-5 .wrap .btn-more div img{
+    width: 12px;
+}
+.con-6{
+    background-image: url(../images/con-6\ background.png);
+    background-size: cover;
+    background-position : left 30px top -70px;
+}
+.con-6 .wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 20px;
+}
+.con-6 .wrap .text{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.con-6 .wrap .text .tit{
+    font-family: "filson";
+    font-size: 30px;
+    font-weight: 700;
+    color: #FF5701;
+    line-height: 34px;
+}
+.con-6 .wrap .text .sub{
+    font-family: "Noto Sans KR", serif;
+    font-size: 14px;
+}
+.con-6 .wrap .text .sub span{
+    font-weight: 700;
+}
+.con-6 .wrap .btn-search{}
+.con-6 .wrap .btn-search button{
+    font-family: "Noto Sans KR", serif;
+    color: #ffffff;
+    font-size: 10px;
+    background-color: #F7941C;
+    border-radius: 999px;
+    padding: 8px 26px;
+}
+.con-6 .wrap .img{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    gap: 10px;
+}
+.con-6 .wrap .img .sec-1{
+    padding-top: 90px;
+}
+.con-6 .wrap .img .sec-2{
+    position: relative;
+}
+.con-6 .wrap .img .image-1{}
+.con-6 .wrap .img .image-1 img{
+    width: 21vw;
+    border-radius: 8px;
+}
+.con-6 .wrap .img .image-2{}
+.con-6 .wrap .img .image-2 img{
+    width: 52vw;
+}
+.con-6 .wrap .img .image-3{
+    position: absolute;
+    top: -80px;
+    left: -80px;
+}
+.con-6 .wrap .img .image-3 img{
+    width: 28vw;
+    border-radius: 8px;
+    box-shadow: 8px 8px #FF5701;
+}
+
+footer{
+    background-image: url(../images/footer.png);
+    background-size: cover;
+}
+footer .wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-top: 60px;    
+}
+footer .wrap .logo{}
+footer .wrap .logo img{width: 30px;}
+footer .wrap .info{
+    width: 90%;
+    font-size: 10px;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0;
+}
+footer .wrap .info .tit{
+    font-family: "filson";
+    font-size: 10px;
+}
+footer .wrap .info .company{
+    font-family: "Noto Sans KR", serif;
+    font-weight: 300;
+}
+footer .wrap .info .copyright{
+    font-family: "Noto Sans KR", serif;
+    font-weight: 300;
+}

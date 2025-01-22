@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "filson";
+    src: url(../font/Fontspring-DEMO-filsonsoft-black-iF66bb1f721d728.otf);
+    font-weight: 900;
+}
+@font-face {
+    font-family: "filson";
+    src: url(../font/Fontspring-DEMO-filsonsoft-bold-iF66bb1f7227185.otf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: "filson";
+    src: url(../font/Fontspring-DEMO-filsonsoft-medium-iF66bb1f724b3e1.otf);
+    font-weight: 300;
+}

@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* v1.0 | 2024-03-11 */
+/*
+	※ 주석가이드
+	대분류간 빈 줄: 3줄
+	중분류간 빈 줄: 2줄
+	소분류간 빈 줄: 1줄
+*/
+
+/* ##############################################################
+	대분류
+############################################################## */
+/* 중분류 */
+
+
+/* 소분류 */
+
+
+
+
+/* ##############################################################
+	시민플랫폼 소개
+############################################################## */
+.part-citizen li { list-style: none; }
+.img-wrap img { width: 100%; }
+
+.part-citizen { width: 100%; letter-spacing: -0.02em; word-break: keep-all; }
+.part-citizen .part-inner { position: relative; max-width: 1200px; box-sizing: border-box; margin: 0 auto; }
+
+.titl-wrap { display: block; }
+.titl-wrap.for-mobile { display: none; }
+
+.part-titl { font-size: 46px; font-family: 'busan'; font-weight: 400; line-height: 1; color: #DD4F3E; }
+.part-titl-sub { font-size: 25px; font-family: 'busan'; line-height: 33px; color: #2C2223; }
+.part-titl-sub { margin-top: 20px; }
+
+
+.split-box { display: flex; }
+.split-box .split-cell:only-child { width: 100%; }
+.split-box .split-cell.ty-img { margin-right: 85px; }
+.split-box.ty-side .split-cell.ty-img { position: absolute; right: 0; margin-right: 0; }
+.split-box.ty-side .split-cell.ty-img .img-wrap { text-align: right; }
+.split-box.ty-side .split-cell:last-child { padding-left: 0; }
+.split-box.ty-platform { text-align: center; }
+
+
+.msg-dot { margin:0; padding: 0; }
+.msg-dot li { position: relative; padding-left: 17px; font-size: 17px; color: #3A3A3A; line-height: 28px; }
+.msg-dot li:not(:first-child) { margin-top: 4px; }
+.msg-dot li:before { content:''; position: absolute; left: 0; top: 11px; width: 5px; height: 5px; border-radius: 50%; background-color: #3A3A3A; }
+
+/* [2024.11.26 2191015] 부산행복 마일리지 관련 css 추가 */
+.msg-hyphen {padding-left:0;}
+.msg-hyphen li:before {width:5px !important;height:1px !important;top:10px !important;;}
+.msg-ast {display:block; position: relative; padding-left: 17px; font-size: 15px; font-weight: 600; color: #3A3A3A; }
+.msg-ast:first-child {margin-top:8px;}
+.msg-ast:before { content:'※'; position: absolute; left: 0; top: 0;}
+/* // 2024.11.22 부산행복 마일리지 관련 css 추가 */
+
+
+.explainbox { margin-top: 40px; }
+.explainbox .box-titl { font-size: 20px; font-weight: bold; line-height: 30px; color: #DD4F3E; }
+.explainbox .box-titl { margin-bottom: 12px; }
+.explainbox .box-desc { font-size: 17px; color: #3A3A3A; }
+.explainbox .desc-list { font-size: 17px; }
+.explainbox .desc-list:after,
+.explainbox .desc-list dd:after { content: ''; display: block; clear: both; }
+.explainbox .desc-list dt { float: left; margin-top: 12px; color: #3A3A3A; }
+.explainbox .desc-list dt:first-child { margin-top: 0; }
+.explainbox .desc-list dd { margin-top: 12px; padding-left: 90px; color: #3A3A3A; }
+.split-box.ty-platform .explainbox { margin-top: 80px; }
+.split-box.ty-platform .titl-wrap + .explainbox { margin-top: 60px; }
+
+/* [2024.11.26 2191015] 부산행복 마일리지 관련 css 추가 */
+.explainbox .desc-list.ty-dot dt {position: relative;padding-left:17px;}
+.explainbox .desc-list.ty-dot dt:before { content:''; position: absolute; left: 0; top: 11px; width: 5px; height: 5px; border-radius: 50%; background-color: #3A3A3A; }
+.explainbox .desc-list.ty-dot dd {padding-left:100px;}
+/* // 2024.11.22 부산행복 마일리지 관련 css 추가 */
+
+.explainbox .img-list { display: flex; margin-top: 40px; }
+.explainbox .img-list li { display: inline-flex; flex-flow: column; width: 100%; padding: 40px 30px 30px  ; border-radius: 30px; background-color: #F2F6FA; text-align: center; }
+.explainbox .img-list li:not(:first-child) { margin-left: 30px; }
+.explainbox .img-list .img-wrap { max-width: 478px; margin: 0 auto; }
+.explainbox .img-list .img-desc { font-size: 17px; color: #000; }
+.explainbox .img-list .img-wrap + .img-desc { margin-top: 10px; }
+.explainbox .img-list .img-desc + .img-wrap { margin-top: 30px; }
+.explainbox .img-list.ty-img-btm li { padding-bottom: 0; }
+.explainbox .img-list.ty-img-btm .img-wrap { margin-top: 15px; padding-left: 20px; }
+.explainbox .img-list.ty-img-btm .img-titl { margin-bottom: 8px; font-size: 17px; font-family: 'busan'; color: #000; }
+
+/* [2024.11.26 2191015] 부산행복 마일리지 관련 css 추가 */
+.boogi_icon {position: relative;}
+.boogi_icon:after {content:''; display:inline-block; width:33px; height:23px; background:url('../img/citizen_05_02.png') no-repeat center / 100%; vertical-align:middle;}
+/* // 2024.11.22 부산행복 마일리지 관련 css 추가 */
+
+@media screen and (max-width: 768px) {
+	.part-citizen .part-inner { padding: 15px; }
+
+	.titl-wrap { display: none; }
+	.titl-wrap.for-mobile { display: block; }
+	.titl-wrap.for-mobile { padding-top: 35px; margin-bottom: 40px; }
+
+	.part-titl { font-size: 34px; line-height: 34px; }
+	.part-titl-sub { font-size: 18px; line-height: 25px; }
+	.part-titl-sub { margin-top: 15px; }
+
+	.explainbox { margin-top: 30px; }
+	.explainbox .box-titl { font-size: 17px; }
+	.explainbox .box-desc { font-size: 15px; }
+
+	.split-box { display: block; }
+	.split-box .split-cell:last-child { padding-left: 0; }
+	.split-box .split-cell.ty-img { margin-right: 0; text-align: center; }
+	.split-box .split-cell.ty-img + .split-cell { margin-top: 40px; }
+	.split-box.ty-side .split-cell.ty-img { position: static; }
+
+	.msg-dot li { margin-top: 0; padding-left: 15px; font-size: 15px; line-height: 23px; }
+	.msg-dot li:before { top: 8px; left: 5px; width: 3px; height: 3px; }
+	.explainbox .desc-list { font-size: 14px; }
+	.explainbox .desc-list dt { margin-top: 8px; line-height: 24px; }
+	.explainbox .desc-list dd { margin-top: 8px; padding-left: 72px; word-break: break-all; }
+
+	.split-box.ty-platform { margin-top: -10px; text-align: left; }
+	.split-box.ty-platform .explainbox { margin-top: 50px; }
+	.split-box.ty-platform .titl-wrap + .explainbox { margin-top: 30px; }
+	.explainbox .img-list { flex-direction: column; margin-top: 30px; }
+	.explainbox .img-list li { padding: 30px 0 20px 30px; box-sizing: border-box; }
+	.explainbox .img-list li:not(:first-child) { margin: 15px 0 0; }
+	.explainbox .img-list .img-desc { font-size: 14px; }
+	.explainbox .img-list .img-desc + .img-wrap { margin-top: 20px; }
+	.explainbox .img-list.ty-img-btm li { overflow: hidden; flex-flow: row; gap : 15px; text-align: left; }
+	.explainbox .img-list.ty-img-btm .img-titl { line-height: 24px; }
+	.explainbox .img-list.ty-img-btm .img-wrap { margin: -10px 0 -30px; padding-left: 0; }
+	.explainbox .img-list.ty-img-btm .img-titl-wrap { width: 160px; }
+
+
+	/* 페이지별 이미지 사이즈 */
+	.img-wrap img { max-width: 330px; }
+
+	/* [2024.11.26 2191015] 부산행복 마일리지 관련 css 추가 */
+	.explainbox .desc-list.ty-dot dt {padding-left:15px;}
+	.explainbox .desc-list.ty-dot dt:before { top: 11px; left: 5px; width: 3px; height: 3px; }
+	.explainbox .desc-list.ty-dot dd {padding-left:83px;}
+}

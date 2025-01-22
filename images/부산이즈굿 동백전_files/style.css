@@ -1,0 +1,356 @@
+@charset "utf-8";
+/**
+ * @author https://www.cosmosfarm.com
+ */
+
+
+ /* 20220929 지도 팝업 시작 */
+.map-wrap {width: 100%; height: 100%; z-index: 999999; position: fixed; background-color: rgba(0, 0, 0, 0.5);}
+.map-frame {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.map-frame .map-title {display: flex; justify-content: center; align-items: center; padding: 16px 0; position: relative; background-color: #dd4f3e;}
+.map-frame .map-title p {font-size: 26px; color: #fff; font-weight: bold;}
+.map-frame .map-title .map_close{position: absolute; right: 10px; background: none; border: 0px; cursor: pointer;}
+.map-content {width: 1102px; height: 595px; margin: auto; overflow: hidden; background-color: #fff; position: relative;}
+.map-content iframe {width: 1054px; height: 543px; margin: 0 auto; position: absolute; top: 25px; left: 25px;}
+/* 끝 */
+
+a.kboard-default-button-small,
+input.kboard-default-button-small,
+button.kboard-default-button-small { position: relative; display: inline-block; *display: inline; zoom: 1; margin: 0; padding: 0 10px; width: auto; height: 32px; line-height: 28px; font-size: 13px; font-weight: normal; letter-spacing: normal; color: #ffffff !important; background: #DD4F3E !important; border: none; border-radius: 0; text-decoration: none !important; cursor: pointer; vertical-align: middle; text-shadow: none; box-shadow: none; transition-duration: 0.3s; box-sizing: content-box; }
+button.kboard-default-button-small2 { position: relative; display: inline-block; *display: inline; zoom: 1; margin: 0; padding: 0 10px; width: auto; height: 32px; line-height: 28px; font-size: 13px; font-weight: normal; letter-spacing: normal; color: #DD4F3E !important; background: #ffffff !important; border: 1px solid #DD4F3E; !important;  text-decoration: none !important; cursor: pointer; vertical-align: middle; text-shadow: none; box-shadow: none; transition-duration: 0.3s; box-sizing: content-box; }
+
+a.kboard-default-button-small:hover,
+a.kboard-default-button-small:focus,
+a.kboard-default-button-small:active,
+input.kboard-default-button-small:hover,
+input.kboard-default-button-small:focus,
+input.kboard-default-button-small:active,
+button.kboard-default-button-small:hover,
+button.kboard-default-button-small:active { opacity: 0.7; }
+
+.kboard-default-poweredby { float: left; padding-bottom: 15px; width: 100%; font-size: 13px; }
+.kboard-default-new-notify { display: inline-block; *display: inline; zoom: 1; padding: 2px 2px; line-height: 10px; font-size: 10px; color: white; background-color: #f61b5d; font-weight: normal; }
+.kboard-default-cut-strings { width: auto; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-wrap: normal; }
+
+#kboard-default-list { display: inline-block; *display: inline; zoom: 1; margin: 0; width: 100%; }
+#kboard-default-list form { margin: 0; padding: 0; }
+#kboard-default-list .kboard-list-header { float: left; display: table; padding-bottom: 15px; width: 100%; }
+#kboard-default-list .kboard-list-header .kboard-total-count { *float: left; display: table-cell; font-size: 13px; }
+#kboard-default-list .kboard-list-header .kboard-sort { *float: right; display: table-cell; text-align: right; }
+#kboard-default-list .kboard-list-header .kboard-sort select { display: inline; margin: 0; padding: 0; width: auto; min-width: 0; max-width: none; height: 26px; min-height: 0; line-height: 26px; font-size: 12px; color: #666666; border-radius: 0; border: 1px solid #f1f1f1; background: white; vertical-align: middle; box-shadow: none; box-sizing: content-box; text-indent: 0; -webkit-appearance: menulist; -moz-appearance: menulist; appearance: menulist; }
+#kboard-default-list .kboard-category { float: left; padding-bottom: 15px; width: 100%; }
+#kboard-default-list .kboard-category.category-mobile { display: none; }
+#kboard-default-list .kboard-category.category-pc { display: block; }
+#kboard-default-list .kboard-category select { display: inline; margin: 0 0 5px 0; padding: 0; width: 100%; min-width: 100%; height: 28px; min-height: 0; line-height: 28px; font-size: 12px; color: #666666; border-radius: 0; border: 1px solid #f1f1f1; background: white; vertical-align: middle; box-shadow: none; box-sizing: border-box; text-indent: 0; -webkit-appearance: menulist; -moz-appearance: menulist; appearance: menulist; }
+#kboard-default-list .kboard-category .kboard-category-list { margin: 0 0 5px 0; padding: 0; list-style: none; border: 0; background-color: #f9f9f9; overflow: hidden; }
+#kboard-default-list .kboard-category .kboard-category-list li { display: inline-block; *display: inline; zoom: 1; margin: 0; padding: 0 5px; border: 0; list-style: none; }
+#kboard-default-list .kboard-category .kboard-category-list li::before,
+#kboard-default-list .kboard-category .kboard-category-list li::after { display: none; }
+#kboard-default-list .kboard-category .kboard-category-list li a { display: block; padding: 10px 10px 8px 10px; font-size: 13px; border: 0; border-bottom: 2px solid transparent; text-decoration: none; text-shadow: none; box-shadow: none; color: #515151; }
+#kboard-default-list .kboard-category .kboard-category-list li.kboard-category-selected a { font-weight: bold; border-bottom: 2px solid #545861; color: #545861; }
+#kboard-default-list .kboard-tree-category-wrap { overflow: hidden; }
+#kboard-default-list .kboard-tree-category-wrap select { display: inline; margin: 0 0 5px 0; padding: 0; width: 100%; height: 28px; line-height: 28px; font-size: 12px; color: #666666; border-radius: 0; border: 1px solid #f1f1f1; background: white; vertical-align: middle; box-shadow: none; box-sizing: border-box; text-indent: 0; -webkit-appearance: menulist; -moz-appearance: menulist; appearance: menulist; }
+#kboard-default-list .kboard-tree-category-search .kboard-search-option-wrap.type-select { width: auto; }
+#kboard-default-list .kboard-tree-category-search .kboard-search-option-wrap.type-tab { width: 100%; }
+#kboard-default-list .kboard-tree-category { float: left; margin: 0 0 5px 0; padding: 0; width: 100%; list-style: none; border: 0; background-color: #f9f9f9; overflow: hidden; }
+#kboard-default-list .kboard-tree-category li { display: inline-block; *display: inline; zoom: 1; margin: 0; padding: 0 5px; border: 0; list-style: none; }
+#kboard-default-list .kboard-tree-category li::before,
+#kboard-default-list .kboard-tree-category li::after { display: none; }
+#kboard-default-list .kboard-tree-category li a { display: block; padding: 10px 10px 8px 10px; font-size: 13px; border: 0; border-bottom: 2px solid transparent; text-decoration: none; text-shadow: none; box-shadow: none; color: #515151; }
+#kboard-default-list .kboard-tree-category li.kboard-category-selected a { font-weight: bold; border-bottom: 2px solid #545861; color: #545861; }
+#kboard-default-list .kboard-tree-category-search { float: left; width: 100%; }
+#kboard-default-list .kboard-tree-category-search .kboard-search-option-wrap { margin-right: 5px; float: left; }
+#kboard-default-list .kboard-list { float: left; width: 100%; background-color: white; }
+#kboard-default-list .kboard-list table { display: table; table-layout: fixed; margin: 0; padding: 0; width: 100%; border: 0; font-size: 13px; border-collapse: collapse; }
+#kboard-default-list .kboard-list table a { color: black; font-weight: normal; text-decoration: none; border: 0; box-shadow: none; font-size: 13px; }
+#kboard-default-list .kboard-list table tr { border: 0; background-color: transparent; transition-duration: 0.3s; }
+#kboard-default-list .kboard-list table th { padding: 10px 0; height: auto; text-align: center; vertical-align: middle; font-size: 13px; }
+#kboard-default-list .kboard-list table td { padding: 10px 0; height: auto; text-align: center; vertical-align: middle; font-size: 13px; }
+#kboard-default-list .kboard-list table th.kboard-list-uid,
+#kboard-default-list .kboard-list table td.kboard-list-uid { width: 72px; }
+#kboard-default-list .kboard-list table th.kboard-list-title,
+#kboard-default-list .kboard-list table td.kboard-list-title { width: auto; }
+#kboard-default-list .kboard-list table th.kboard-list-user,
+#kboard-default-list .kboard-list table td.kboard-list-user { width: 80px; }
+#kboard-default-list .kboard-list table th.kboard-list-date,
+#kboard-default-list .kboard-list table td.kboard-list-date { width: 105px; }
+#kboard-default-list .kboard-list table th.kboard-list-vote,
+#kboard-default-list .kboard-list table td.kboard-list-vote { width: 55px; }
+#kboard-default-list .kboard-list table th.kboard-list-view,
+#kboard-default-list .kboard-list table td.kboard-list-view { width: 55px; }
+#kboard-default-list .kboard-list table th.kboard-list-amt,
+#kboard-default-list .kboard-list table td.kboard-list-amt { width: 105px; }
+
+
+#kboard-default-list .kboard-list tbody td.kboard-list-amt { text-align: center; }
+#kboard-default-list .kboard-list thead { background-color:#E5E5E5; }
+#kboard-default-list .kboard-list thead tr td { font-weight: bold; color: #545861; border: 0; border-bottom: 2px solid #f1f1f1; }
+#kboard-default-list .kboard-list tbody tr td { word-break: break-all; border: 0; border-bottom: 1px solid #f1f1f1; }
+#kboard-default-list .kboard-list tbody tr:hover { background-color: #f7f7f7; }
+#kboard-default-list .kboard-list tbody tr.kboard-list-notice { background-color: #f4f4f4; }
+#kboard-default-list .kboard-list tbody tr.kboard-list-selected .kboard-default-cut-strings { font-weight: bold; }
+#kboard-default-list .kboard-list tbody td.kboard-list-title { text-align: left; }
+#kboard-default-list .kboard-list tbody td.kboard-list-title img { display: inline; margin: 0; width: auto; height: auto; vertical-align: middle; max-width: 100%; }
+#kboard-default-list .kboard-list tbody td.kboard-list-title .kboard-comments-count { color: #00a8e7; }
+#kboard-default-list .kboard-list tbody td.kboard-list-user img.avatar { display: inline; margin: 0; width: 24px; max-width: none; height: 24px; vertical-align: middle; border-radius: 50%; }
+#kboard-default-list .kboard-list .kboard-mobile-contents { display: none; font-size: 12px; color: #999999; }
+#kboard-default-list .kboard-list .kboard-mobile-contents .contents-item { display: inline; margin: 0; padding: 0; }
+#kboard-default-list .kboard-list .kboard-mobile-contents .contents-item img.avatar { display: inline; margin: 0; width: 24px; max-width: none; height: 24px; vertical-align: middle; border-radius: 50%; }
+#kboard-default-list .kboard-list .kboard-mobile-contents .contents-separator { display: inline; margin: 0; padding: 0 2px; color: #bebebe; }
+#kboard-default-list .kboard-pagination { float: left; padding: 15px 0; width: 100%; }
+#kboard-default-list .kboard-pagination .kboard-pagination-pages { float: left; margin: 0; padding: 0; width: 100%; list-style: none; text-align: center; border: 0; }
+#kboard-default-list .kboard-pagination .kboard-pagination-pages li { display: inline-block; *display: inline; zoom: 1; margin: 0; padding: 0 1px; background: none; border: 0; list-style: none; }
+#kboard-default-list .kboard-pagination .kboard-pagination-pages li a { display: block; margin: 0; padding: 0 11px; height: 28px; line-height: 28px; font-size: 13px; color: #999999; text-decoration: none; border: 0; background-color: #f9f9f9; box-shadow: none; transition-duration: 0.3s; }
+#kboard-default-list .kboard-pagination .kboard-pagination-pages li:hover a,
+#kboard-default-list .kboard-pagination .kboard-pagination-pages li.active a { border: 0; color: #545861; background-color: #eaeaea; }
+#kboard-default-list .kboard-pagination .kboard-pagination-pages li:before { display: none; }
+#kboard-default-list .kboard-pagination .kboard-pagination-pages li:after { display: none; }
+#kboard-default-list .kboard-search { float: left; padding-bottom: 15px; width: 100%; text-align: center; }
+/* #kboard-default-list .kboard-search select { display: inline; margin: 0; padding: 0 5px; width: 100px; min-width: 0; max-width: 100px; height: 32px; min-height: 0; font-size: 13px; color: #666666; border-radius: 0; border: 1px solid #f1f1f1; background: none; background-color: white; line-height: 26px; vertical-align: middle; box-shadow: none; box-sizing: content-box; -webkit-appearance: menulist; -moz-appearance: menulist; appearance: menulist; }
+#kboard-default-list .kboard-search input { display: inline; margin: 0; padding: 0 5px; width: 200px; min-width: 0; max-width: 200px; height: 25px; min-height: 0; font-size: 13px; color: #666666; border-radius: 0; border: 1px solid #f1f1f1; background: none; background-color: white; line-height: 26px; vertical-align: middle; box-shadow: none; box-sizing: content-box; } */
+#kboard-default-list .kboard-control { float: left; padding-bottom: 15px; width: 100%; text-align: right; }
+
+/* 20220929 검색폼 수정 시작*/
+#kboard-default-list .kboard-search select { display: inline; margin: 0; padding: 0 9px; width: 136px; min-width: 0; max-width: 136px; height: 50px; min-height: 0; font-size: 16px; color: #666666; border-radius: 0; border: 1px solid #f1f1f1; background: none; background-color: white; line-height: 26px; vertical-align: middle; box-shadow: none; box-sizing: border-box; -webkit-appearance: menulist; -moz-appearance: menulist; appearance: menulist; }
+#kboard-default-list .kboard-search input {font-size: 19px; color: #000; font-weight: 900; display: inline; margin: 0; padding: 0 9px; width: 404px; min-width: 0; max-width: 404px; height: 50px; min-height: 0; border-radius: 0; border: 1px solid #f1f1f1; background: none; background-color: white; line-height: 26px; vertical-align: middle; box-shadow: none; box-sizing: border-box;}
+#kboard-default-list .kboard-search input::placeholder {font-size: 16px; color: #666666; font-weight: normal;}
+#kboard-default-list button { width: 102px; min-width: 0; max-width: 102px; height: 50px; min-height: 0; box-sizing: border-box; font-size: 16px;}
+/* 검색폼 수정 끝 */
+
+/* 20220929 가맹점 조회 추가 시작 */
+/* 조회/결과 */
+#kboard-default-list .kboard-list-num {font-size: 18px; color: #dd4f3e; display: flex; align-items: center; margin-top: 41px;}
+#kboard-default-list .kboard-list-num .list-num-line {width: 6px; height: 18px; background-color: #DD4F3E; border-radius: 30px; margin-right: 6px;}
+#kboard-default-list .kboard-list-lookUp {display: flex; align-items: flex-end; justify-content: space-between; border-bottom: 1px solid #cdcdcd; padding: 25px 0;}
+#kboard-default-list .lookUp-list {font-size: 16px; color: #3a3a3a;}
+#kboard-default-list .lookUp-list p {margin-bottom: 16px;}
+#kboard-default-list .lookUp-list .lookUp-list-title {font-size: 22px; font-weight: 500; color: #000;}
+#kboard-default-list .lookUp-list .lookUp-list-add {margin-bottom: 0; display: flex;}
+#kboard-default-list .lookUp-list .lookUp-list-add .add {margin-right: 17px;}
+#kboard-default-list .lookUp-list .lookUp-list-add p {display: flex; align-items: center;}
+#kboard-default-list .lookUp-list .lookUp-list-add p img {display: block; width: 14px; height: 14px; margin-right: 7px;}
+#kboard-default-list .lookUp-list-map {border-radius: 30px; box-shadow: 2px 2px 2px rgb(0 0 0 / 20%); background-color: #000000; background-size: cover; background-repeat: no-repeat; border: 0px solid #f5e9d3;}
+#kboard-default-list .lookUp-list-map:hover {background-color: #DD4F3E;}
+#kboard-default-list .lookUp-list-map-disable {border-radius: 30px; box-shadow: 2px 2px 2px rgb(0 0 0 / 20%); background-color: #808080; background-size: cover; background-repeat: no-repeat; border: 0px solid #f5e9d3; color:#fff}
+#kboard-default-list .lookUp-list-map p a {font-size: 17px; line-height: 25px; color: #fff; font-weight: 400; display: block; padding: 11px 32px;}
+#kboard-default-list .lookUp-list-map p a:hover {color: #fff;}
+#kboard-default-list .lookUp-list-map-disable p a {font-size: 17px; line-height: 25px; color: #fff; font-weight: 400; display: block; padding: 11px 32px; cursor: default;}
+
+/* 검색결과 없음 */
+#kboard-default-list .kboard-list .kboard-list-none {text-align: center; font-size: 18px; padding: 41px 0 26px 0; border-bottom: 1px solid #cdcdcd;}
+
+/* 20220929가맹점 조회 추가 끝 */
+
+
+
+#kboard-default-list .kboard-search .kinput { display: inline; margin: 0; padding: 0 5px; width: 100px; min-width: 0; max-width: 100px; height: 25px; min-height: 0; font-size: 13px; color: #666666; border-radius: 0; border: 1px solid #f1f1f1; background: none; background-color: white; line-height: 26px; vertical-align: middle; box-shadow: none; box-sizing: content-box; !important;}
+
+
+#kboard-default-editor { overflow: hidden; }
+#kboard-default-editor form { margin: 0; padding: 0; }
+#kboard-default-editor select { display: inline; margin: 0; padding: 0 5px; font-size: 13px; width: 30%; height: 28px; line-height: 28px; color: #666666; border-radius: 0; border: 0; border-bottom: 1px solid #dcdcdc; box-shadow: none; background: none; background-color: transparent; box-sizing: content-box; vertical-align: top; text-indent: 0; -webkit-appearance: menulist; -moz-appearance: menulist; appearance: menulist; }
+#kboard-default-editor input[type=text],
+#kboard-default-editor input[type=email],
+#kboard-default-editor input[type=number],
+#kboard-default-editor input[type=date],
+#kboard-default-editor input[type=password] { display: inline; margin: 0; padding: 0 5px; width: 30%; height: 28px; line-height: 28px; font-size: 13px; color: #666666; border-radius: 0; border: 0; border-bottom: 1px solid #dcdcdc; box-shadow: none; background: none; background-color: transparent; box-sizing: content-box; vertical-align: top; }
+#kboard-default-editor input[type=checkbox] { width: auto; -webkit-appearance: checkbox; -moz-appearance: checkbox; appearance: checkbox; }
+#kboard-default-editor input[type=radio] { width: auto; -webkit-appearance: radio; -moz-appearance: radio; appearance: radio; }
+#kboard-default-editor select:hover,
+#kboard-default-editor input[type=text]:hover,
+#kboard-default-editor input[type=email]:hover,
+#kboard-default-editor input[type=number]:hover,
+#kboard-default-editor input[type=date]:hover,
+#kboard-default-editor input[type=password]:hover { border-bottom: 1px solid #9e9e9e; }
+#kboard-default-editor select:focus,
+#kboard-default-editor input[type=text]:focus,
+#kboard-default-editor input[type=email]:focus,
+#kboard-default-editor input[type=number]:focus,
+#kboard-default-editor input[type=date]:focus,
+#kboard-default-editor input[type=password]:focus { border-bottom: 2px solid #9e9e9e; }
+#kboard-default-editor input[type=file] { display: inline; margin: 0; padding: 0; width: 30%; font-size: 12px; color: #666666; border-radius: 0; border: 0; box-shadow: none; background-color: transparent; }
+#kboard-default-editor .kboard-attr-title input { width: 70%; }
+#kboard-default-editor .kboard-attr-row { float: left; padding: 5px 0; width: 100%; background-color: white; }
+#kboard-default-editor .kboard-attr-row .attr-name { display: inline; float: left; margin: 0; padding: 0 10px 0 10px; width: 120px; line-height: 30px; color: #545861; font-size: 13px; font-weight: bold; }
+#kboard-default-editor .kboard-attr-row .attr-name img { display: inline; margin: 0; padding: 0; width: auto; max-width: 100%; vertical-align: middle; }
+#kboard-default-editor .kboard-attr-row .attr-name .attr-required-text { color: red; font-weight: normal; font-size: 12px; }
+#kboard-default-editor .kboard-attr-row.kboard-attr-content .attr-name { display: none; }
+#kboard-default-editor .kboard-attr-row .attr-value { margin: 0 0 0 140px; padding: 0; line-height: 30px; font-size: 13px; }
+#kboard-default-editor .kboard-attr-row .attr-value .attr-value-option { display: inline; padding-right: 20px; width: auto; font-size: 13px; cursor: pointer; }
+#kboard-default-editor .kboard-attr-row .attr-value .attr-value-option input { cursor: pointer; }
+#kboard-default-editor .kboard-attr-row .attr-value .attr-value-label { display: inline; padding-right: 5px; width: auto; cursor: pointer; }
+#kboard-default-editor .kboard-attr-row .attr-value .attr-value-label input { cursor: pointer; }
+#kboard-default-editor .kboard-attr-row .attr-value .description { margin: 0; color: #666666; }
+#kboard-default-editor .kboard-attr-row .attr-value .kboard-tree-category-wrap { float: left; width: 100%; }
+#kboard-default-editor .kboard-attr-row .attr-value .kboard-tree-category-wrap select { clear: both; float: left; margin-bottom: 5px; width: 30%; }
+#kboard-default-editor .kboard-content { float: left; margin: 0; padding: 9px 0; width: 100%; background-color: white; }
+#kboard-default-editor .kboard-content .editor-textarea { display: inline; margin: 0; padding: 5px; width: 100%; min-width: 100%; max-width: 100%; height: 250px; min-height: 0; font-size: 13px; border: 1px solid #dcdcdc; box-shadow: none; background: none; background-color: transparent; box-sizing: border-box; text-indent: 0; }
+#kboard-default-editor .kboard-control { float: left; padding: 15px 0; width: 100%; }
+#kboard-default-editor .kboard-control .left { position: static; float: left; }
+#kboard-default-editor .kboard-control .right { position: static; float: right; width: 50%; text-align: right; }
+#kboard-default-editor.confirm { margin: 100px auto; max-width: 590px; }
+#kboard-default-editor.confirm input[type=password] { width: 100%; box-sizing: border-box; }
+
+#kboard-default-document { display: inline-block; *display: inline; zoom: 1; margin: 0; width: 100%; }
+#kboard-default-document .kboard-document-wrap { float: left; width: 100%; background-color: white; }
+#kboard-default-document .kboard-title { float: left; width: 100%; }
+#kboard-default-document .kboard-title h1 { margin: 0; padding: 12px 22px; color: #545861; font-weight: bold; font-size: 22px; line-height: 30px; text-align: left; }
+#kboard-default-document .kboard-detail { clear: both; float: left; width: 100%; border-top: 1px solid #f1f1f1; border-bottom: 1px solid #f1f1f1; background-color: #f9f9f9; font-size: 13px; }
+#kboard-default-document .kboard-detail .detail-attr { display: inline-block; *display: inline; zoom: 1; float: left; margin: 0; padding: 12px 35px 12px 22px; }
+#kboard-default-document .kboard-detail .detail-attr .detail-name { float: left; font-weight: bold; color: #545861; text-align: right; }
+#kboard-default-document .kboard-detail .detail-attr .detail-value { float: left; padding-left: 20px; color: #545861; }
+#kboard-default-document .kboard-detail .detail-attr .detail-value a { color: #545861; text-decoration: none; border: 0; box-shadow: none; }
+#kboard-default-document .kboard-detail .detail-attr .detail-value img.avatar { display: inline; margin: 0; width: 24px; max-width: none; height: 24px; vertical-align: middle; border-radius: 50%; }
+#kboard-default-document .kboard-content { clear: both; float: left; width: 100%; min-height: 200px; }
+#kboard-default-document .kboard-content .content-view { margin: 0; padding: 22px; word-break: break-all; }
+#kboard-default-document .kboard-content .content-view iframe { max-width: 100%; }
+#kboard-default-document .kboard-content .content-view img { display: inline; margin: 0; vertical-align: middle; max-width: 100%; }
+#kboard-default-document .kboard-content .content-view hr { margin: 10px 0; padding: 0; height: 1px; border: 0; background-color: #f1f1f1; }
+#kboard-default-document .kboard-content .content-view ul { margin: 0.75em 0; }
+#kboard-default-document .kboard-content .content-view ol { margin: 0.75em 0; }
+#kboard-default-document .kboard-content .content-view p { margin: 0 0 0.75em; }
+#kboard-default-document .kboard-content .content-view p:last-child { margin: 0; }
+#kboard-default-document .kboard-content .content-view .thumbnail-area { text-align: center; }
+#kboard-default-document .kboard-content .content-view .aligncenter { display: block; margin-right: auto; margin-left: auto; }
+#kboard-default-document .kboard-content .content-view .alignright { float:right; }
+#kboard-default-document .kboard-content .content-view .alignleft { float: left; }
+#kboard-default-document .kboard-document-action { padding: 0 22px 5px 22px; overflow: hidden; line-height: 1; }
+#kboard-default-document .kboard-document-action .left { position: static; float: left; }
+#kboard-default-document .kboard-document-action .right { position: static; float: right; text-align: right; }
+#kboard-default-document .kboard-attach { clear: both; margin: 0 22px; padding: 10px 0 5px 0; font-size: 12px; overflow: hidden; line-height: 1; border-top: 1px dashed #ededed; }
+#kboard-default-document .kboard-button-action { margin: 0 0 5px 0; padding: 4px 5px; font-size: 12px; font-weight: normal; line-height: 12px; text-align: left; border: 1px solid #ededed; background: none; background-color: white; border-radius: 2px; letter-spacing: normal; cursor: pointer; vertical-align: middle; text-shadow: none; box-shadow: none; }
+#kboard-default-document .kboard-button-action span { position: static; display: inline; margin: 0; padding: 0; font-size: 12px; line-height: 12px; }
+#kboard-default-document .kboard-button-like { color: #ff5959; }
+#kboard-default-document .kboard-button-unlike { color: #3d62aa; }
+#kboard-default-document .kboard-button-print { color: gray; }
+#kboard-default-document .kboard-button-download { color: gray; }
+#kboard-default-document .kboard-comments-area { float: left; width: 100%; }
+#kboard-default-document .kboard-document-navi { float: left; padding-top: 15px; width: 100%; }
+#kboard-default-document .kboard-document-navi a { display: block; text-decoration: none; border: 0; font-size: 13px; line-height: 20px; box-shadow: none; color: #545861; transition-duration: .3s; }
+#kboard-default-document .kboard-document-navi .navi-document-title { display: block; }
+#kboard-default-document .kboard-document-navi .navi-arrow { position: absolute; display: block; }
+#kboard-default-document .kboard-document-navi .kboard-prev-document { position: relative; float: left; width: 45%; }
+#kboard-default-document .kboard-document-navi .kboard-prev-document .navi-document-title { padding-left: 15px; }
+#kboard-default-document .kboard-document-navi .kboard-prev-document .navi-arrow { left: 0; top: 0; }
+#kboard-default-document .kboard-document-navi .kboard-prev-document:hover a { color: black; }
+#kboard-default-document .kboard-document-navi .kboard-next-document { position: relative; float: right; width: 45%; text-align: right; }
+#kboard-default-document .kboard-document-navi .kboard-next-document .navi-document-title { padding-right: 15px; }
+#kboard-default-document .kboard-document-navi .kboard-next-document .navi-arrow { right: 0; top: 0; }
+#kboard-default-document .kboard-document-navi .kboard-next-document:hover a { color: black; }
+#kboard-default-document .kboard-control { float: left; padding: 15px 0;  width: 100%; }
+#kboard-default-document .kboard-control .left { position: static; float: left; }
+#kboard-default-document .kboard-control .right { position: static; float: right; text-align: right; }
+
+#kboard-default-latest table { display: table; table-layout: fixed; width: 100%; border: 0; border-bottom: 1px solid #f1f1f1; }
+#kboard-default-latest table tr { padding: 0; border: 0; }
+#kboard-default-latest table th { padding: 5px 0; height: auto; border: 0; text-align: center; }
+#kboard-default-latest table td { padding: 5px 0; height: auto; border: 0; border-top: 1px solid #f1f1f1; vertical-align: middle; }
+#kboard-default-latest table td.kboard-latest-title { text-align: left; }
+#kboard-default-latest table .kboard-latest-title { padding-left: 5px; font-size: 13px; }
+#kboard-default-latest table .kboard-latest-title a { text-decoration: none; box-shadow: none; }
+#kboard-default-latest table .kboard-latest-title img { display: inline; margin: 0; width: auto; height: auto; vertical-align: middle; max-width: 100%; }
+#kboard-default-latest table .kboard-latest-title .kboard-comments-count { }
+#kboard-default-latest table .kboard-latest-date { width: 80px; text-align: center; font-size: 13px; }
+
+@media screen and (max-width:768px){
+    /* 20220929 지도 팝업 추가 시작 */
+    .map-frame .map-title { padding: 13px 0;}
+    .map-frame .map-title p {font-size: 23px;}
+    .map-content {width: 695px; height: 565px;}
+    .map-content iframe {width: 645px; height: 525px; top: 20px; left: 20px;}
+    /* 끝 */
+}
+
+@media screen and (max-width: 600px) {
+    #kboard-default-list .kboard-category.category-mobile { display: block; padding-top: 30px; }
+    #kboard-default-list .kboard-category.category-pc { display: none; }
+    #kboard-default-list .kboard-tree-category-search .kboard-search-option-wrap.select { width: 100%; }
+    #kboard-default-list .kboard-list table { border-top: 1px solid #f1f1f1; }
+    #kboard-default-list .kboard-list tbody tr td { word-break: break-all; border: 0; border-bottom: 1px solid #f1f1f1; }
+    #kboard-default-list .kboard-list tbody tr:hover { background-color: #f7f7f7; }
+    #kboard-default-list .kboard-list tbody tr.kboard-list-notice { background-color: #f4f4f4; }
+    #kboard-default-list .kboard-list tbody tr.kboard-list-selected .kboard-default-cut-strings { font-weight: bold; }
+    #kboard-default-list .kboard-list table th.kboard-list-title { padding: 5px 5px; width: 100%;  }
+    #kboard-default-list .kboard-list table td.kboard-list-title { padding: 5px 5px; width: 100%;  }
+    #kboard-default-list .kboard-list table th.kboard-list-title .kboard-default-cut-strings { margin-bottom: 10px; white-space: normal; font-size: 15px; line-height: 23px; }
+    #kboard-default-list .kboard-list table td.kboard-list-title .kboard-default-cut-strings { margin-bottom: 10px; white-space: normal; font-size: 15px; line-height: 23px; }
+    #kboard-default-list .kboard-list table th.kboard-list-amt { padding: 5px 5px; width: 100%; text-align: center }
+    #kboard-default-list .kboard-list table td.kboard-list-amt { padding: 5px 5px; width: 100%; text-align: center }
+    #kboard-default-list .kboard-list table th.kboard-list-uid,
+    #kboard-default-list .kboard-list table th.kboard-list-user,
+    #kboard-default-list .kboard-list table th.kboard-list-date,
+    #kboard-default-list .kboard-list table th.kboard-list-vote,
+    #kboard-default-list .kboard-list table th.kboard-list-view { display: none; }
+    #kboard-default-list .kboard-list table td.kboard-list-uid,
+    #kboard-default-list .kboard-list table td.kboard-list-user,
+    #kboard-default-list .kboard-list table td.kboard-list-date,
+    #kboard-default-list .kboard-list table td.kboard-list-vote,
+    #kboard-default-list .kboard-list table td.kboard-list-view { display: none; }
+    #kboard-default-list .kboard-list .kboard-mobile-contents { display: block; }
+    #kboard-default-list .kboard-pagination .kboard-pagination-pages li
+    #kboard-default-list .kboard-pagination .kboard-pagination-pages li.first-page,
+    #kboard-default-list .kboard-pagination .kboard-pagination-pages li.last-page,
+    #kboard-default-list .kboard-pagination .kboard-pagination-pages li.prev-page,
+    #kboard-default-list .kboard-pagination .kboard-pagination-pages li.next-page,
+    #kboard-default-list .kboard-pagination .kboard-pagination-pages li.active { display: inline-block; }
+    #kboard-default-list .kboard-pagination .kboard-pagination-pages li.prev-page a,
+    #kboard-default-list .kboard-pagination .kboard-pagination-pages li.next-page a { padding: 0 18px; }
+    #kboard-default-list .kboard-search select { float: left; margin-right: 10%; width: 23%; min-width: 23%; margin-top : 10px; height: 35px; line-height: 28px; box-sizing: border-box; }
+    #kboard-default-list .kboard-search input { float: left; margin-right: 1%; width: 49%; min-width: 49%; height: 28px; line-height: 28px; box-sizing: border-box; }
+    /* #kboard-default-list .kboard-search button { float: left; width: 15%; min-width: 15%; box-sizing: border-box; } */
+
+
+     /* 20220929 지도 팝업 시작 */
+    .map-frame .map-title {padding: 12px 0;}
+    .map-frame .map-title p {font-size: 20px;}
+    .map-content {width: 462px; height: 445px;}
+    .map-content iframe {width: 422px; height: 405px; top: 20px; left: 20px;}
+    /* 끝 */
+
+    /* 20220929 검색폼 수정 시작 */
+    #kboard-default-list .kboard-search select,
+    #kboard-default-list .kboard-search input,
+    #kboard-default-list .kboard-search input::placeholder,
+    #kboard-default-list .kboard-search button
+    {font-size: 13px;}
+    #kboard-default-list .kboard-search button { float: left; width: 15%; min-width: 15%; box-sizing: border-box; height: 28px;}
+    /*검색폼 수정 끝 */
+
+    /* 20220929 조회 수정 시작 */
+    #kboard-default-list .kboard-list-num {font-size: 15px; margin-top:31px;}
+    #kboard-default-list .lookUp-list .lookUp-list-title {font-size: 18px;}
+    #kboard-default-list .kboard-list-lookUp {display: block; padding: 18px 0;}
+    #kboard-default-list .lookUp-list p {margin-bottom: 12px;}
+    #kboard-default-list .lookUp-list .lookUp-list-add {display: block;}
+    #kboard-default-list .lookUp-list-map p a {font-size: 15px;}
+
+    /* map */
+    #kboard-default-list .kboard-list .kboard-list-none{font-size: 15px; padding: 26px 0 26px 0;}
+    #kboard-default-list .lookUp-list-map {width: 151px;}
+    /* 20220929끝 */
+
+    #kboard-default-list .kboard-search .kinput { float: left; margin-right: 1%; width: 49%; min-width: 49%; height: 28px; line-height: 28px; box-sizing: border-box; !important;}
+
+
+
+    #kboard-default-editor select,
+    #kboard-default-editor input[type=text],
+    #kboard-default-editor input[type=email],
+    #kboard-default-editor input[type=number],
+    #kboard-default-editor input[type=date],
+    #kboard-default-editor input[type=password],
+    #kboard-default-editor input[type=file] { width: 100% !important; box-sizing: border-box; }
+    #kboard-default-editor .kboard-attr-row { padding: 10px 0; }
+    #kboard-default-editor .kboard-attr-row .attr-name { padding: 0; width: 100%; font-size: 14px; }
+    #kboard-default-editor .kboard-attr-row .attr-value { margin: 0; }
+    #kboard-default-editor .kboard-attr-row .attr-value .kboard-tree-category-wrap select { margin-bottom: 10px; width: 100%; }
+    #kboard-default-editor.confirm { max-width: none; }
+
+    #kboard-default-document .kboard-title h1 { padding: 10px 5px; font-size: 18px; }
+    #kboard-default-document .kboard-content .content-view { padding: 10px 5px; }
+    #kboard-default-document .kboard-detail .detail-attr { clear: both; padding: 10px 5px; line-height: normal; }
+    #kboard-default-document .kboard-document-action { padding: 10px 5px 5px 5px; }
+    #kboard-default-document .kboard-attach { margin: 0 5px; padding: 10px 0 5px 0; }
+    #kboard-default-document .kboard-document-navi .kboard-prev-document { width: 100%; }
+    #kboard-default-document .kboard-document-navi .kboard-next-document { margin-top: 10px; float: left; width: 100%; text-align: left; }
+}
